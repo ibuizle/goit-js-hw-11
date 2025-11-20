@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snackbar</title>
+
+    <script type="module" crossorigin src="/goit-js-hw-11/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-A92OCY9B.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-CUZofXIC.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/styles-DZcJihJZ.css">
+  </head>
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a class="nav-logo" href="./index.html" aria-label="Site logo">
+        <svg class="nav-logo-icon" width="100" height="30">
+          <use href="{=$icon-path}"></use>
+        </svg>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-act}" href="../1-timer.html">timer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-curr}" href="../2-snackbar.html">snackbar</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="container">
+      <h1 class="main-title">
+        <span class="main-title-gradient">Snackbar</span> Page
+      </h1>
+
+      <a class="back-link" href="./index.html">Go back</a>
+
+      <form class="form">
+        <label>
+          Delay (ms)
+          <input type="number" name="delay" required />
+        </label>
+
+        <fieldset>
+          <legend>State</legend>
+
+          <label>
+            <input type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+
+          <label>
+            <input type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button type="submit">Create notification</button>
+      </form>
+    </main>
+
+  </body>
+</html>
