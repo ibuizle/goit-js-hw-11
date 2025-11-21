@@ -4,8 +4,6 @@ import "izitoast/dist/css/iziToast.min.css";
 import {
   createGallery,
   clearGallery,
-  showLoader,
-  hideLoader,
 } from "./js/render-functions.js";
 
 import { getImagesByQuery } from "./js/pixabay-api.js";
@@ -28,7 +26,6 @@ async function onSubmit(e) {
   }
 
   clearGallery();
-  showLoader();
 
   try {
     const data = await getImagesByQuery(query);
@@ -39,7 +36,6 @@ async function onSubmit(e) {
           "Sorry, there are no images matching your search query. Please try again!",
         position: "topRight",
       });
-      hideLoader();
       return;
     }
 
@@ -51,7 +47,6 @@ async function onSubmit(e) {
     });
     console.error(err);
   } finally {
-    hideLoader();
     form.reset();
   }
 }
