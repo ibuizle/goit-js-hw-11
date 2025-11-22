@@ -3,7 +3,6 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 export const gallery = document.querySelector(".gallery");
 
-// SimpleLightbox
 export const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
